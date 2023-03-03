@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function minArr(array){
+        let valueMin = arr[0];
+        if(isNaN(valueMin)){
+            return
+        } else{
+            for(let i=0;i<array.length;i++)
+            {
+                if(valueMin>array[i])
+                {
+                    valueMin=array[i];
+                }
+            }
+        }return valueMin;
+    }
+
+    let minArray;
+    let arr =[];
+    let amount=prompt("Nhap so phan tu cua mang: ");
+    for(let i=0;i<amount;i++)
+    {
+        arr[i] = prompt("Nhap gia tri cua phan tu thu: "+(i+1));
+    }
+
+    document.write("Mang gia tri la:"+ arr+"<br>");
+    minArray = minArr(arr);
+    document.write("Gia tri nho nhat trong mang la:"+minArray);
+
+
+
+
+</script>
+</body>
+</html>
